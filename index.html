@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <div>
-      <form action="/blockchain" method="POST" id="form1">
+      <form action="/home" method="POST" id="form1">
         <div class="form-group">
           <label for="ExampleName">Nama</label>
           <input
@@ -57,7 +57,6 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
-    <title>Document</title>
   </head>
   <body>
     <script
@@ -75,11 +74,5 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $('#form1').on('submit', function (e) {
-        e.preventDefault(); // cancel submission
-        window.location.replace('/');
-      });
-    </script>
   </body>
 </html>
