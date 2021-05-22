@@ -8,19 +8,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // console.log(blockchain)
 
-app.get('/', (req, res) => {
+app.get('/blockchain', (req, res) => {
   res.json(blockchain);
-  console.log(blockchain);
 });
 app.get('/home', (req, res) => {
   res.sendFile(path.resolve('index.html'));
 });
 
-app.post('/blockchain', (req, res) => {
-  res.json(req.body);
+app.post('/home', (req, res) => {
   block = req.body;
-  // console.log(typeof(block.previousHash));
   blockchain.addBlock(block);
+
+  res.sendFile(path.resolve('index.html'));
 });
 
 app.listen(port, () => {
