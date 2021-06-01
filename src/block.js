@@ -61,7 +61,6 @@ class Blockchain {
     );
     this.chain.push(readyBlock);
   }
-
   showBlockchain() {
     for (let value of this.chain) {
       return value;
